@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Docket turns human review of AI and customer-service conversations into decisions an organization can prove. Built for insurance, finance, healthcare, and other regulated industries."
+    />
+    <meta name="theme-color" content="#6C4EE3" />
+    <meta name="color-scheme" content="light" />
+    <title>Docket — Human review infrastructure for responsible AI</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
+    />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="nav-backdrop" data-close-menu></div>
+    <header class="site-header" id="top">
+      <nav class="nav" aria-label="Primary">
+        <a class="logo" href="#top">
+          <svg class="logo-mark" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <rect width="32" height="32" rx="8" fill="#6C4EE3" />
+            <rect x="8" y="7" width="16" height="18" rx="3" fill="white" />
+            <rect x="11" y="11" width="7" height="1.6" rx="0.8" fill="#6C4EE3" />
+            <rect x="11" y="15" width="10" height="1.6" rx="0.8" fill="#C4B8F5" />
+            <rect x="11" y="19" width="8" height="1.6" rx="0.8" fill="#C4B8F5" />
+            <circle cx="22" cy="22" r="5.5" fill="#3B82F6" />
+            <path d="M19.6 22.1l1.5 1.5 3.2-3.2" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <span class="logo-word">Docket</span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+          aria-label="Open menu"
+        >
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+
+        <div class="nav-menu" id="nav-menu">
+          <ul class="nav-links">
+            <li><a href="#product">Product</a></li>
+            <li><a href="#how-it-works">How it works</a></li>
+            <li><a href="#trust">Trust</a></li>
+          </ul>
+          <button class="btn btn-primary btn-sm" type="button" data-open-access>
+            Request access
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-heading">
+        <div class="orb orb-a" aria-hidden="true"></div>
+        <div class="orb orb-b" aria-hidden="true"></div>
+        <div class="orb orb-c" aria-hidden="true"></div>
+        <div class="orb-ring" aria-hidden="true"></div>
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Human review infrastructure for responsible AI</p>
+            <h1 id="hero-heading">
+              AI decisions move fast.<br />
+              Accountability should keep up.
+            </h1>
+            <p class="lede">
+              Review conversations by issue, resolve disagreement, and leave a
+              verifiable record of every human decision.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#how-it-works">See how it works</a>
+              <a class="btn btn-secondary" href="#product">Why Docket</a>
+            </div>
+          </div>
+
+          <figure class="hero-figure">
+            <figcaption class="visually-hidden">
+              Product preview of Docket’s review workspace. Conversations are
+              grouped by issue with counts and review progress. A representative
+              conversation is shown beside an evidence panel. Human decision
+              controls are labeled Accurate, Not accurate, and Unsure. An AI
+              suggestion is marked separately from the human ruling. Reviewer
+              disagreement is preserved, and an audit-record link is visible.
+            </figcaption>
+
+            <div class="scene-3d">
+              <div class="mockup" aria-hidden="true">
+              <div class="mockup-chrome">
+                <div class="mockup-dots">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="mockup-chrome-title">Docket · Review workspace</div>
+                <div class="mockup-user">
+                  <span class="avatar avatar-maya">MC</span>
+                  Maya Chen
+                </div>
+              </div>
+
+              <div class="mockup-body">
+                <aside class="mockup-sidebar">
+                  <p class="mockup-label">Issue groups</p>
+                  <ul class="issue-list">
+                    <li class="issue-item is-active">
+                      <div class="issue-item-top">
+                        <span class="issue-name">Inaccurate coverage</span>
+                        <span class="issue-count">1,284</span>
+                      </div>
+                      <div class="progress" role="presentation">
+                        <div class="progress-bar" style="width: 62%"></div>
+                      </div>
+                      <div class="issue-meta">
+                        <span class="state-chip state-review">In review</span>
+                        <span>62% reviewed</span>
+                      </div>
+                    </li>
+                    <li class="issue-item">
+                      <div class="issue-item-top">
+                        <span class="issue-name">Missing disclosure</span>
+                        <span class="issue-count">847</span>
+                      </div>
+                      <div class="progress">
+                        <div class="progress-bar" style="width: 41%"></div>
+                      </div>
+                      <div class="issue-meta">
+                        <span class="state-chip state-pending">Pending</span>
+                        <span>41% reviewed</span>
+                      </div>
+                    </li>
+                    <li class="issue-item">
+                      <div class="issue-item-top">
+                        <span class="issue-name">Unsafe advice</span>
+                        <span class="issue-count">312</span>
+                      </div>
+                      <div class="progress">
+                        <div class="progress-bar" style="width: 18%"></div>
+                      </div>
+                      <div class="issue-meta">
+                        <span class="state-chip state-pending">Pending</span>
+                        <span>18% reviewed</span>
+                      </div>
+                    </li>
+                    <li class="issue-item">
+                      <div class="issue-item-top">
+                        <span class="issue-name">Privacy violation</span>
+                        <span class="issue-count">89</span>
+                      </div>
+                      <div class="progress">
+                        <div class="progress-bar is-complete" style="width: 90%"></div>
+                      </div>
+                      <div class="issue-meta">
+                        <span class="state-chip state-inherited">Inherited</span>
+                        <span>90% reviewed</span>
+                      </div>
+                    </li>
+                  </ul>
+                </aside>
+
+                <div class="mockup-main">
+                  <div class="mockup-issue-head">
+                    <div>
+                      <h2>Inaccurate coverage information</h2>
+                      <p>
+                        Rule <span class="mono">coverage.imaging.auth</span> · v3.2 ·
+                        1,284 conversations
+                      </p>
+                    </div>
+                    <span class="state-chip state-review">Group in review</span>
+                  </div>
+
+                  <div class="mockup-panels">
+                    <section class="panel conversation-panel">
+                      <div class="panel-head">
+                        <span>Representative conversation</span>
+                        <span class="panel-index">3 of 12 examples</span>
+                      </div>
+                      <div class="thread">
+                        <div class="bubble customer">
+                          <span class="bubble-who">Customer</span>
+                          Does my plan cover an MRI for persistent back pain?
+                        </div>
+                        <div class="bubble assistant">
+                          <span class="bubble-who">Assistant</span>
+                          Yes — all imaging is fully covered, and no prior
+                          authorization is required.
+                        </div>
+                      </div>
+                      <div class="mismatch">
+                        <span class="mismatch-label">Policy mismatch</span>
+                        POL-441 requires prior authorization for MRI except in
+                        emergency settings.
+                      </div>
+                    </section>
+
+                    <section class="panel evidence-panel">
+                      <div class="panel-head">
+                        <span>Evidence</span>
+                        <span class="state-chip state-ai">AI-prepared</span>
+                      </div>
+                      <ul class="evidence-list">
+                        <li>
+                          <span class="evidence-kicker">Policy</span>
+                          POL-441 · Imaging authorization
+                        </li>
+                        <li>
+                          <span class="evidence-kicker">Prior ruling</span>
+                          Same rule · 12 Nov 2025
+                        </li>
+                        <li>
+                          <span class="evidence-kicker">Trigger</span>
+                          coverage.imaging.auth · v3.2
+                        </li>
+                      </ul>
+                      <p class="ai-note">
+                        AI summarized this packet. It cannot submit a decision.
+                      </p>
+                    </section>
+                  </div>
+
+                  <section class="decision-bar">
+                    <div class="decision-bar-top">
+                      <div>
+                        <p class="mockup-label">Human decision</p>
+                        <p class="decision-who">Named reviewer required · Maya Chen</p>
+                      </div>
+                      <span class="state-chip state-ai">AI proposed: Not accurate</span>
+                    </div>
+
+                    <div class="verdict-row">
+                      <span class="verdict-btn">Accurate</span>
+                      <span class="verdict-btn is-human-selected">
+                        Not accurate
+                        <span class="verdict-note">Human decision</span>
+                      </span>
+                      <span class="verdict-btn">Unsure</span>
+                    </div>
+
+                    <div class="apply-row">
+                      <span class="apply-option">This conversation · 1</span>
+                      <span class="apply-option is-selected">
+                        Entire verified group · 1,284 conversations
+                      </span>
+                    </div>
+
+                    <div class="decision-footer">
+                      <div class="dissent">
+                        <span class="avatar avatar-maya">MC</span>
+                        <span class="avatar avatar-jordan">JL</span>
+                        <span>Disagreement preserved · 2 opinions on record</span>
+                      </div>
+                      <div class="decision-actions">
+                        <span class="audit-link">View audit record</span>
+                        <span class="commit-btn">Commit ruling</span>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section product" id="product" aria-labelledby="product-heading">
+        <div class="container">
+          <div class="section-intro reveal">
+            <p class="eyebrow">The complete decision</p>
+            <h2 id="product-heading">
+              A model can recommend.<br />
+              Only a person can be accountable.
+            </h2>
+            <p class="lede">
+              Most review tools capture a label. Docket captures the decision
+              itself — who made it, what they saw, which rule applied, where
+              reviewers disagreed, who resolved it, and whether the record
+              was later changed.
+            </p>
+          </div>
+
+          <div class="product-layout reveal">
+            <ul class="capture-list">
+              <li>
+                <span class="capture-index">01</span>
+                <div>
+                  <strong>Who made it</strong>
+                  A named human reviewer is attached to every ruling. AI
+                  cannot sign.
+                </div>
+              </li>
+              <li>
+                <span class="capture-index">02</span>
+                <div>
+                  <strong>What evidence they reviewed</strong>
+                  Policies, representative conversations, prior rulings, and
+                  the packet prepared for them.
+                </div>
+              </li>
+              <li>
+                <span class="capture-index">03</span>
+                <div>
+                  <strong>Which policy or rule was applied</strong>
+                  Versioned, deterministic rules — not a black-box similarity
+                  score.
+                </div>
+              </li>
+              <li>
+                <span class="capture-index">04</span>
+                <div>
+                  <strong>Where reviewers disagreed</strong>
+                  Independent opinions stay on the record instead of being
+                  overwritten.
+                </div>
+              </li>
+              <li>
+                <span class="capture-index">05</span>
+                <div>
+                  <strong>Who resolved the disagreement</strong>
+                  Adjudication is a separate, signed act — not a silent edit.
+                </div>
+              </li>
+              <li>
+                <span class="capture-index">06</span>
+                <div>
+                  <strong>Whether the record was changed later</strong>
+                  Corrections append. The original judgment remains readable.
+                </div>
+              </li>
+            </ul>
+
+            <figure class="ruling-visual">
+              <figcaption class="visually-hidden">
+                Two independent reviewer opinions — Maya Chen, Not accurate,
+                and Jordan Lee, Unsure — lead to a signed final ruling of Not
+                accurate by Priya Shah. Both original opinions remain visible
+                beneath the final ruling.
+              </figcaption>
+              <div class="opinions" aria-hidden="true">
+                <article class="opinion-card">
+                  <header>
+                    <span class="avatar avatar-maya">MC</span>
+                    <div>
+                      <strong>Maya Chen</strong>
+                      <span>Reviewer · 12 Mar, 14:12</span>
+                    </div>
+                  </header>
+                  <p class="opinion-verdict is-not-accurate">Not accurate</p>
+                  <p>Coverage statement conflicts with POL-441.</p>
+                </article>
+                <article class="opinion-card">
+                  <header>
+                    <span class="avatar avatar-jordan">JL</span>
+                    <div>
+                      <strong>Jordan Lee</strong>
+                      <span>Reviewer · 12 Mar, 16:04</span>
+                    </div>
+                  </header>
+                  <p class="opinion-verdict is-unsure">Unsure</p>
+                  <p>Needs confirmation on emergency-exception language.</p>
+                </article>
+              </div>
+              <div class="ruling-connector" aria-hidden="true">
+                <span>Independent opinions preserved</span>
+              </div>
+              <article class="final-ruling" aria-hidden="true">
+                <div class="final-ruling-head">
+                  <span class="state-chip state-human">Signed final ruling</span>
+                  <span class="mono">AUD-88421</span>
+                </div>
+                <p class="final-verdict">Not accurate</p>
+                <p class="final-who">
+                  Adjudicated by <strong>Priya Shah</strong>, Lead Reviewer
+                </p>
+                <ul class="preserved">
+                  <li><span>Maya Chen</span> Not accurate</li>
+                  <li><span>Jordan Lee</span> Unsure</li>
+                </ul>
+              </article>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section grouping" id="grouping" aria-labelledby="grouping-heading">
+        <div class="container">
+          <div class="section-intro reveal">
+            <p class="eyebrow">Issue groups</p>
+            <h2 id="grouping-heading">
+              Review the issue once, not the same failure a thousand times.
+            </h2>
+            <p class="lede">
+              When the same failure shows up 1,284 times, you don’t review
+              each one. You inspect a few examples, then decide whether the
+              ruling applies to that single conversation — or to every
+              conversation in the issue.
+            </p>
+          </div>
+
+          <div class="scope-demo reveal">
+            <p class="mockup-label">What should this ruling cover?</p>
+            <div class="scope-options">
+              <article class="scope-option">
+                <div class="scope-visual" aria-hidden="true">
+                  <div class="scope-thread">
+                    <span class="scope-who">Customer</span>
+                    Does my plan cover an MRI?
+                  </div>
+                </div>
+                <div class="scope-copy-block">
+                  <h3>This conversation only</h3>
+                  <p>
+                    Use when the case is unique, incomplete, or still under
+                    investigation.
+                  </p>
+                  <p class="scope-result">Changes <strong>1</strong> record</p>
+                </div>
+              </article>
+
+              <p class="scope-vs">or</p>
+
+              <article class="scope-option is-group">
+                <div class="scope-visual" aria-hidden="true">
+                  <div class="scope-stack">
+                    <div class="scope-thread">Does my plan cover an MRI?</div>
+                    <div class="scope-thread">Is imaging fully covered?</div>
+                    <div class="scope-thread">Do I need prior authorization?</div>
+                  </div>
+                  <span class="scope-count">1,284 conversations</span>
+                </div>
+                <div class="scope-copy-block">
+                  <h3>The whole issue</h3>
+                  <p>
+                    Use after reviewing representative examples of the same
+                    failure, matched by the same rule.
+                  </p>
+                  <p class="scope-result">Changes <strong>1,284</strong> records</p>
+                </div>
+              </article>
+            </div>
+
+            <aside class="confirm-card" aria-label="Group decision confirmation">
+              <div class="confirm-copy">
+                <p class="mockup-label">Shown before you confirm a group ruling</p>
+                <h3>This will change 1,284 conversations</h3>
+                <p>
+                  Rule <span class="mono">coverage.imaging.auth</span> v3.2.
+                  Examples have been reviewed. Original opinions stay on the
+                  record.
+                </p>
+              </div>
+              <div class="confirm-actions">
+                <span class="btn btn-secondary btn-sm" aria-hidden="true">Keep it to 1</span>
+                <span class="btn btn-primary btn-sm" aria-hidden="true">Apply to 1,284</span>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="section workflow" id="how-it-works" aria-labelledby="workflow-heading">
+        <div class="container">
+          <div class="section-intro reveal">
+            <p class="eyebrow">How it works</p>
+            <h2 id="workflow-heading">
+              From thousands of conversations<br />
+              to one defensible decision.
+            </h2>
+          </div>
+
+          <ol class="steps">
+            <li class="step reveal">
+              <span class="step-num">1</span>
+              <div>
+                <h3>Group by what went wrong</h3>
+                <p>
+                  Versioned rules organize conversations into reproducible issue
+                  groups — inaccurate coverage, missing disclosures, unsafe
+                  advice, privacy violations, and the failures that matter to
+                  your policies.
+                </p>
+              </div>
+            </li>
+            <li class="step reveal">
+              <span class="step-num">2</span>
+              <div>
+                <h3>Review the evidence</h3>
+                <p>
+                  Human reviewers inspect representative examples, relevant
+                  policies, previous rulings, and AI-prepared evidence before
+                  anything is committed.
+                </p>
+              </div>
+            </li>
+            <li class="step reveal">
+              <span class="step-num">3</span>
+              <div>
+                <h3>Prove every ruling</h3>
+                <p>
+                  Decisions, disagreement, corrections, reviewer identities, and
+                  rule versions enter a tamper-evident audit trail that an
+                  organization or auditor can verify.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section assistance" id="assistance" aria-labelledby="ai-heading">
+        <div class="container">
+          <div class="section-intro reveal">
+            <p class="eyebrow">Human authorization</p>
+            <h2 id="ai-heading">
+              AI prepares the review.<br />
+              Humans make the decision.
+            </h2>
+            <p class="lede">
+              Docket uses AI to make review faster, not to take
+              responsibility. A named reviewer always remains accountable.
+            </p>
+          </div>
+
+          <div class="boundary reveal">
+            <section class="boundary-pane ai-pane">
+              <header>
+                <span class="state-chip state-ai">AI assistance</span>
+                <h3>What AI is allowed to do</h3>
+              </header>
+              <ul class="allow-list">
+                <li>Summarize evidence</li>
+                <li>Find similar previous rulings</li>
+                <li>Explain which rule was triggered</li>
+                <li>Propose classification rules</li>
+                <li>Draft a rationale</li>
+                <li>Assemble review packets and reports</li>
+              </ul>
+            </section>
+
+            <section class="boundary-pane human-pane">
+              <header>
+                <span class="state-chip state-human">Human authorization</span>
+                <h3>What AI cannot do</h3>
+              </header>
+              <ul class="deny-list">
+                <li>Submit a verdict</li>
+                <li>Propagate a decision</li>
+                <li>Hide reviewer disagreement</li>
+                <li>Replace human approval</li>
+                <li>Change previous records</li>
+              </ul>
+              <p class="lock-note">
+                Commit remains disabled until a named reviewer takes
+                responsibility.
+              </p>
+              <div class="commit-preview">
+                <span class="commit-btn is-disabled">Commit ruling</span>
+                <span>Requires Maya Chen</span>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section class="section trust" id="trust" aria-labelledby="trust-heading">
+        <div class="container">
+          <div class="section-intro reveal">
+            <p class="eyebrow">Trust</p>
+            <h2 id="trust-heading">
+              Trust isn’t a badge.<br />
+              It’s the product.
+            </h2>
+            <p class="lede">
+              Docket is intended for insurance, finance, healthcare, and
+              other environments where “the AI said so” is not an acceptable
+              explanation.
+            </p>
+          </div>
+
+          <div class="principle-grid">
+            <article class="principle reveal">
+              <h3>Human in control</h3>
+              <p>
+                AI can prepare an action, but a named reviewer must commit
+                every ruling.
+              </p>
+            </article>
+            <article class="principle reveal">
+              <h3>Dissent preserved</h3>
+              <p>
+                A second opinion never overwrites the first. Disagreement
+                remains part of the permanent record.
+              </p>
+            </article>
+            <article class="principle reveal">
+              <h3>Reproducible by design</h3>
+              <p>
+                Deterministic, versioned rules explain why every conversation
+                belongs to an issue.
+              </p>
+            </article>
+            <article class="principle reveal">
+              <h3>Tenant-owned boundaries</h3>
+              <p>
+                Customer data, encryption, model policies, and deployments
+                remain isolated.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta" aria-labelledby="cta-heading">
+        <div class="container cta-inner reveal">
+          <h2 id="cta-heading">
+            Make every AI review<br />
+            a decision you can prove.
+          </h2>
+          <p>
+            Bring accountability, consistency, and audit-ready evidence to
+            every conversation your organization reviews.
+          </p>
+          <button class="btn btn-on-gradient" type="button" data-open-access>
+            Request access
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <a class="logo" href="#top">
+          <svg class="logo-mark" width="28" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <rect width="32" height="32" rx="8" fill="#6C4EE3" />
+            <rect x="8" y="7" width="16" height="18" rx="3" fill="white" />
+            <rect x="11" y="11" width="7" height="1.6" rx="0.8" fill="#6C4EE3" />
+            <rect x="11" y="15" width="10" height="1.6" rx="0.8" fill="#C4B8F5" />
+            <rect x="11" y="19" width="8" height="1.6" rx="0.8" fill="#C4B8F5" />
+            <circle cx="22" cy="22" r="5.5" fill="#3B82F6" />
+            <path d="M19.6 22.1l1.5 1.5 3.2-3.2" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <span class="logo-word">Docket</span>
+        </a>
+        <p>Human review infrastructure for responsible AI.</p>
+        <p class="copyright">© 2026 Docket. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <dialog class="access-dialog" id="access-dialog" aria-labelledby="access-title">
+      <form class="access-form" method="dialog" id="access-form">
+        <div class="dialog-head">
+          <h2 id="access-title">Request access</h2>
+          <button class="icon-btn" type="button" data-close-access aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <p class="dialog-lede">
+          Tell us about your review program. We’ll follow up to see whether
+          Docket is a fit.
+        </p>
+        <div class="form-success" id="access-success" hidden>
+          <p>
+            <strong>Request received.</strong> We’ll be in touch at the email
+            you provided.
+          </p>
+          <button class="btn btn-primary" type="button" data-close-access>
+            Close
+          </button>
+        </div>
+        <div class="form-fields" id="access-fields">
+          <label>
+            Full name
+            <input type="text" name="name" autocomplete="name" required />
+          </label>
+          <label>
+            Work email
+            <input type="email" name="email" autocomplete="email" required />
+          </label>
+          <label>
+            Organization
+            <input type="text" name="org" autocomplete="organization" required />
+          </label>
+          <label>
+            Role
+            <select name="role" required>
+              <option value="" disabled selected>Select a role</option>
+              <option>Compliance / audit</option>
+              <option>Review operations</option>
+              <option>Risk / legal</option>
+              <option>Product / engineering</option>
+              <option>Executive</option>
+              <option>Other</option>
+            </select>
+          </label>
+          <button class="btn btn-primary" type="submit">Submit request</button>
+        </div>
+      </form>
+    </dialog>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
